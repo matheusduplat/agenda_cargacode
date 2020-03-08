@@ -44,16 +44,28 @@
                  
         <img class="mb-4" src="assert/img/logo.png" alt="" width="72%" height="30%">
         
-        <p>FORNECEDOR:</p>
-        <input type="text" name="nome" class="form-control" placeholder="" required="">
-               <br> <br>
         <p>codigo fornecedor:</p>     
          <input type="text" name="cod_forne" class="form-control" placeholder="" required="">
-                 <br> <br>
+                 <br>  
+        <p>FORNECEDOR:</p>
+        <input type="text" name="nome" class="form-control" placeholder="" required="">
+               <br>
+        
+          
          <p>Data:</p>     
          <input type="date" name="data" class="form-control" placeholder="" required="">
-                 <br> <br>
-                      
+                 <br>
+         <p>Área:</p>
+         
+         <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  <label class="form-check-label" for="inlineRadio1">Seca</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  <label class="form-check-label" for="inlineRadio1">Frio/congelado</label>
+</div>
+                   <br><br>
         
          <button class="btn btn-lg btn-primary" type="submit">Agendar</button>       
                  
