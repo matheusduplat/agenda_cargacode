@@ -69,7 +69,7 @@
     <tr>
       <td ><?= $agendados['nome_agend']?></td>
       <td><?= $agendados['data_agend']?></td>
-      <td><?= $agendados['id_forn']?></td>
+      <td><?= $agendados['nome_area']?></td>
           
     </tr>    
     <?php endforeach ?> 
