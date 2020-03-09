@@ -13,7 +13,7 @@ class logar extends CI_controller{
             if($usuario){
                 $this->session->set_userdata("usuario_logado",$usuario);
                 $this->session->set_flashdata("sucesso", "logado com sucesso");   
-                $this->load->view('home');  
+                redirect('/welcome/home');
                
             }else{
                 

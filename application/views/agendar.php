@@ -42,30 +42,24 @@
         <div class="container" style="text-align: center;" >
    <form class="form-signin" action="<?= site_url("agenda/novo")?>" method="post">                
                  
-        <img class="mb-4" src="assert/img/logo.png" alt="" width="72%" height="30%">
+        
         
         <p>codigo fornecedor:</p>     
          <input type="text" name="cod_forne" class="form-control" placeholder="" required="">
                  <br>  
         <p>FORNECEDOR:</p>
         <input type="text" name="nome" class="form-control" placeholder="" required="">
-               <br>
-        
+               <br>    
           
          <p>Data:</p>     
          <input type="date" name="data" class="form-control" placeholder="" required="">
                  <br>
-         <p>Área:</p>
+         <p>
+         Digite: 1-Area Seca  ||||  2-Frios/Congelados
+         </p>
          
-         <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  <label class="form-check-label" for="inlineRadio1">Seca</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  <label class="form-check-label" for="inlineRadio1">Frio/congelado</label>
-</div>
-                   <br><br>
+         <input type="text" name="area" class="form-control" placeholder="" required="">
+                   <br>
         
          <button class="btn btn-lg btn-primary" type="submit">Agendar</button>       
                  

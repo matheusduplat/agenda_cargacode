@@ -43,6 +43,46 @@
 
 
 
+<div class="container">
+<br>
+<div class="btn-group ">
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked>Área Seca
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option2" autocomplete="off">Área Frios/Congelados
+  </label>
+</div>
+    <br>
+
+ <table class="table">
+  <thead class="thead-dark">
+    <tr >
+      <th scope="col">Fornecedor</th>
+      <th scope="col">Data</th>
+      <th scope="col">Área</th>
+      <th></th>
+        </tr>
+  </thead>
+  <tbody>
+  <?php foreach($agenda as $agendados):?>
+    <tr>
+      <td ><?= $agendados['nome_agend']?></td>
+      <td><?= $agendados['data_agend']?></td>
+      <td><?= $agendados['id_forn']?></td>
+          
+    </tr>    
+    <?php endforeach ?> 
+  </tbody>
+</table>
+          <br>
+          <div class="centralizar">
+          <button class="btn btn-primary " type="submit">Imprimir</button>
+          </div>
+    </div>
+  
+
+
     
 
 </body>

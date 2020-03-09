@@ -11,9 +11,11 @@ class Welcome extends CI_Controller {
 
 
 
-public function home()	{
-		$this->load->view('home');
-	}
+	public function home(){
+		$this->load->model("agenda_model");		
+		$data["agenda"]= $this->agenda_model->listaAgendados();    
+		$this->load->view('home', $data);
+	  }
 
 
 public function agenda(){

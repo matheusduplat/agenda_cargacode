@@ -10,7 +10,8 @@ class agenda extends CI_Controller{
             
           "nome_agend"=> $this->input->post("nome"),
           "data_agend"=> $this->input->post("data"),
-          "id_forn"=> $this->input->post("cod_forne"),          
+          "id_forn"=> $this->input->post("cod_forne"),
+          "id_area"=> $this->input->post("area"),         
 
         );
 
@@ -44,7 +45,25 @@ class agenda extends CI_Controller{
   
     }
 
-    
+    public function editar(){
+      $id= $this->input->get("id");
+      $this->load->model("agenda_model");
+      $agenda = $this->agenda_model->retorna($id);
+      $dados = array("agenda"=> $agenda);
+      $this->load->view("editar",$dados);
+
+
+    }
+
+    public function salvar($id){
+
+      $this->load->model("agenda_model");
+      $this->agenda_model->salvar($id);
+      $this->session->set_flashdata('success','Produto alterado com sucesso');
+      redirect('/agenda/agendados');
+
+
+    }
   
 
 

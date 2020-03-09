@@ -64,9 +64,9 @@
     <tr>
       <td ><?= $agendados['nome_agend']?></td>
       <td><?= $agendados['data_agend']?></td>
-      <td><?= $agendados['id_forn']?></td>
+      <td><?= $agendados['nome_area']?></td>
       <td >        
-        <?= anchor("agenda/detalhe?id={$agendados['id_agend']}", "Alterar", array("class"=> "btn btn-primary ",))?> 
+        <?= anchor("agenda/editar?id={$agendados['id_agend']}", "Alterar", array("class"=> "btn btn-primary ",))?> 
          
              
         <?= anchor("agenda/detalhe?id={$agendados['id_agend']}", "Deletar", array("class"=> "btn btn-danger"))?> 
