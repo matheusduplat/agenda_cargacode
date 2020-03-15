@@ -55,7 +55,9 @@
     <tr >
       <th scope="col">Fornecedor</th>
       <th scope="col">Data</th>
+      <th scope="col">Volume Da carga</th>
       <th scope="col">Área</th>
+      
       <th></th>
         </tr>
   </thead>
@@ -63,8 +65,10 @@
   <?php foreach($agenda as $agendados):?>
     <tr>
       <td ><?= $agendados['nome_agend']?></td>
-      <td><?= $agendados['data_agend']?></td>
+      <td><?= date('d/m/y',strtotime($agendados['data_agend']))?></td>
+      <td><?= $agendados['volume']?></td>
       <td><?= $agendados['nome_area']?></td>
+      
       <td >        
         <?= anchor("agenda/editar?id={$agendados['id_agend']}", "Alterar", array("class"=> "btn btn-primary ",))?> 
          

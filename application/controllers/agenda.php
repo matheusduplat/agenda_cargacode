@@ -11,7 +11,8 @@ class agenda extends CI_Controller{
           "nome_agend"=> $this->input->post("nome"),
           "data_agend"=> $this->input->post("data"),
           "id_forn"=> $this->input->post("cod_forne"),
-          "id_area"=> $this->input->post("area"),         
+          "id_area"=> $this->input->post("area"),
+          "volume"=>$this->input->post("volume"),      
 
         );
 

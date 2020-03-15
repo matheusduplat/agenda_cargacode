@@ -38,12 +38,13 @@
             </div>
         </div>        
 </header>
+<body>
      
         <div class="container" style="text-align: center;" >
    <form class="form-signin" action="<?= site_url("agenda/novo")?>" method="post">                
                  
         
-        
+        <br>
         <p>codigo fornecedor:</p>     
          <input type="text" name="cod_forne" class="form-control" placeholder="" required="">
                  <br>  
@@ -54,7 +55,10 @@
          <p>Data:</p>     
          <input type="date" name="data" class="form-control" placeholder="" required="">
                  <br>
-         <p>
+
+        <p>Volume da Carga:</p> 
+        <input type="text" name="volume" class="form-control" placeholder="" required="">
+         <p>         
          Digite: 1-Area Seca  ||||  2-Frios/Congelados
          </p>
          
@@ -74,7 +78,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 
+  
   <?php include('footer/footer.php'); ?>
-
 
 </html>

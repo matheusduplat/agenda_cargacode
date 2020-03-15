@@ -1,12 +1,9 @@
 
 
 
-<footer class="footer">
-    <div class="container">
-        <br>
-        <p class="text-center">
+<footer>   
+        
             Desenvolvido por 3M DEVELOPERS                
-        </p>
-            
-    </div>
+               
+    
 </footer>
