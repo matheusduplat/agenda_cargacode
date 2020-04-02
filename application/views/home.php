@@ -45,10 +45,17 @@
 
 <div class="container">
 <br>
-<div>
-  <button class="btn btn-dark" type="submit" name="options" id="option1" autocomplete="" checked>Área Seca</button>
-    <button  class="btn btn-dark" type="submit" name="options" id="option2" autocomplete="">Área Frios/Congelados
+
+<div class="btn-toolbar ">  
+<div class="btn-group mr-2">
+<form action="<?= site_url("agenda/filtro")?>" method="post">
+  <button class="btn btn-dark" type="submit" name="seca"  value="seca" autocomplete="">Área Seca</button>
+  </form>  
+  </div>
+   <form action="<?= site_url("agenda/filtro2")?>" method="post">    
+    <button  class="btn btn-dark" type="submit" name="frios/congelados"  value="frios/congelados" autocomplete="">Área Frios/Congelados
   </button>
+  </form> 
 </div>    
 
  <table class="table">
@@ -72,19 +79,18 @@
     </tr>    
     <?php endforeach ?> 
   </tbody>
+
 </table>
           <br>
+          <div class="container">
           <div class="centralizar">
           <button class="btn btn-primary " type="submit">Imprimir</button>
-          </div>
+          </div></div>
+          <br><br><br>
+    </div>
+    
     </div>
   
-
-
-    
-
-</body>
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

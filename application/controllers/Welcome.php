@@ -13,7 +13,7 @@ class Welcome extends CI_Controller {
 
 	public function home(){
 		$this->load->model("agenda_model");		
-		$data["agenda"]= $this->agenda_model->listaAgendados();    
+		$data["agenda"]= $this->agenda_model->listaAgendados1();    
 		$this->load->view('home', $data);
 	  }
 

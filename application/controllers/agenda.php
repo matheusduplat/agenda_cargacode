@@ -18,7 +18,7 @@ class agenda extends CI_Controller{
 
         $this->load->model("agenda_model");
         $this->agenda_model->cadastrar($agendar);
-        $this->load->view("agendar");
+        $this->load->view("relatorio_agendar");
 
 
     }
@@ -66,7 +66,25 @@ class agenda extends CI_Controller{
 
     }
   
+public function pesquisar(){
+  $this->load->model("agenda_model");	 
+		$data["agenda"]= $this->agenda_model->pesquisar();    
+		$this->load->view('agendados', $data);
 
+}
 
+public function filtro(){
+  $this->load->model("agenda_model");	 
+		$data["agenda"]= $this->agenda_model->filtro();    
+		$this->load->view('home', $data);
+
+}
+
+public function filtro2(){
+  $this->load->model("agenda_model");	 
+		$data["agenda"]= $this->agenda_model->filtro2();    
+		$this->load->view('home', $data);
+
+}
 
 }

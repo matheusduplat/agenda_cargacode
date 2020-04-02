@@ -43,8 +43,8 @@
     
     <div class="container">
         <br><br>
- <form class="form-inline my-2 my-lg-0">
-       <input class="form-control mr-sm-2" type="search" placeholder="Filtrar" aria-label="Pesquisar">
+ <form class="form-inline my-2 my-lg-0" method="post" action="<?= site_url("agenda/pesquisar")?>">
+       <input class="form-control mr-sm-2" type="search" name="pesquisar" placeholder="Filtrar" aria-label="Pesquisar">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filtrar</button>
         </form>
 
@@ -65,7 +65,7 @@
   <?php foreach($agenda as $agendados):?>
     <tr>
       <td ><?= $agendados['nome_agend']?></td>
-      <td><?= date('d/m/y',strtotime($agendados['data_agend']))?></td>
+      <td><?= $agendados['data_agend']?></td>
       <td><?= $agendados['volume']?></td>
       <td><?= $agendados['nome_area']?></td>
       
@@ -79,6 +79,7 @@
     <?php endforeach ?> 
   </tbody>
 </table>
+<br><br><br>
     </div>
   
     
